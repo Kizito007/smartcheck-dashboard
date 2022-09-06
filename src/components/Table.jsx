@@ -1,83 +1,60 @@
 import * as React from 'react';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import InputAdornment from '@mui/material/InputAdornment';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
 
-export default function Table() {
-  const [age, setAge] = React.useState('');
+function createData(name, calories, fat, carbs, protein) {
+  return { name, calories, fat, carbs, protein };
+}
 
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
+const rows = [
+  createData('1', 'Application name goes here', '3 servers', '11/12/20 3: 57:29 PM', 'Healthy'),
+  createData('2', 'Application name goes here', '2 servers', '11/12/20 3: 57:29 PM', 'Healthy'),
+  createData('3', 'Application name goes here', '2 servers', '11/12/20 3: 57:29 PM', 'Healthy'),
+  createData('4', 'Application name goes here', '3 servers', '11/12/20 3: 57:29 PM', 'Healthy'),
+  createData('5', 'Application name goes here', '3 servers', '11/12/20 3: 57:29 PM', 'Healthy'),
+];
 
+export default function BasicTable() {
   return (
-    <div className='tableContainer'>
-        <FormControl sx={{ m: 1, minWidth: '120' }} variant="outlined">
-          <OutlinedInput
-            id="outlined-adornment-weight"
-            // value={values.weight}
-            // onChange={handleChange('weight')}
-            endAdornment={<InputAdornment position="end">🔍</InputAdornment>}
-            aria-describedby="outlined-weight-helper-text"
-            inputProps={{
-              'aria-label': 'weight',
-            }}
-          />
-        </FormControl>
-        <FormControl sx={{ m: 1, minWidth: 120 }}>
-            <InputLabel id="demo-simple-select-helper-label">All application</InputLabel>
-            <Select
-            labelId="demo-simple-select-helper-label"
-            id="demo-simple-select-helper"
-            value={age}
-            label="Age"
-            onChange={handleChange}
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <TableHead>
+        <TableRow>            
+          <TableCell align="right"> Showing 10 of 5000 Entries</TableCell>
+        </TableRow>
+        </TableHead>
+        <TableHead>
+          <TableRow>
+            <TableCell>S/N</TableCell>
+            <TableCell>APPLICATION</TableCell>
+            <TableCell align="right">SERVERS MAPPED</TableCell>
+            <TableCell align="right">LAST SCAN DATE</TableCell>
+            <TableCell align="right">STATUS</TableCell>
+            <TableCell align="right">ACTION</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <TableRow
+              key={row.name}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-            <MenuItem value="">
-                <em>None</em>
-            </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
-            </Select>
-        </FormControl> 
-        <FormControl sx={{ m: 1, minWidth: 120 }}>
-            <InputLabel id="demo-simple-select-helper-label">All servers</InputLabel>
-            <Select
-            labelId="demo-simple-select-helper-label"
-            id="demo-simple-select-helper"
-            value={age}
-            label="Age"
-            onChange={handleChange}
-            >
-            <MenuItem value="">
-                <em>None</em>
-            </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
-            </Select>
-        </FormControl> 
-        <FormControl sx={{ m: 1, minWidth: 120 }}>
-            <InputLabel id="demo-simple-select-helper-label">Health check status</InputLabel>
-            <Select
-            labelId="demo-simple-select-helper-label"
-            id="demo-simple-select-helper"
-            value={age}
-            label="Age"
-            onChange={handleChange}
-            >
-            <MenuItem value="">
-                <em>None</em>
-            </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
-            </Select>
-        </FormControl> 
-    </div>
-  )
+              <TableCell component="th" scope="row">
+                {row.name}
+              </TableCell>
+              <TableCell align="right">{row.calories}</TableCell>
+              <TableCell align="right">{row.fat}</TableCell>
+              <TableCell align="right">{row.carbs}</TableCell>
+              <TableCell align="right">{row.protein}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
 }

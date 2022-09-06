@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../components/Header';
-import Table from './Table';
+import SelectBar from './SelectBar';
+import BasicTable from './Table';
 
 const HomeScreen = () => {
   return (
@@ -49,7 +50,8 @@ const HomeScreen = () => {
         </div>
     </div>
     work in progress...
-    <Table />
+    <SelectBar />
+    <BasicTable />
     </>
   )
 }
