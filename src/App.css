@@ -1,0 +1,76 @@
+.smartcheck {
+  font-size: 27px;
+  color: #fff;
+  padding: 20px;
+  padding-left: 5%;
+  background: #1b1164;
+  height: 80px;
+  width: 100%;
+}
+.css-1t6c9ts {
+  padding-left: 3%;
+}
+/* .css-19r6kue-MuiContainer-root {
+  background: #fff;
+} */
+.css-1q39md6-MuiButtonBase-root-MuiButton-root {
+  color: #1b1164;
+}
+.rect-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+}
+.rectangle {
+  width: 400px;
+  height: 228px;
+  /* UI Properties */
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 0.4000000059604645px solid #707070;
+  border-radius: 4px;
+  opacity: 1;
+  margin: 20px 10px;
+}
+.rectangle h3 {
+  margin: 15px;
+}
+.rect-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative;
+  top: 25px;
+  text-align: center;
+}
+.rect-stats div {
+  /* margin: 50px; */
+}
+.nums {
+  padding: 30px;
+  border-radius: 50px;
+  background: aliceblue;
+}
+.num1 {
+  background: inherit;
+  border: 2px solid #1b1464;
+  color: #1b1464;
+}
+.num2 {
+  border: 2px solid #24c977;
+  background: inherit;
+  color: #24c977;
+}
+.num3 {
+  border: 2px solid #ff4343f7;
+  background: #ff4343f7;
+  color: #fff;
+}
+.num4 {
+  border: 2px solid #e0b237;
+  background: #e0b237;
+  color: #fff;
+}
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+  font-size: 15px;
+}
