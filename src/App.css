@@ -10,9 +10,9 @@
 .css-1t6c9ts {
   padding-left: 3%;
 }
-/* .css-19r6kue-MuiContainer-root {
-  background: #fff;
-} */
+.css-wjh20t-MuiPagination-ul {
+  justify-content: center;
+}
 .backdrop {
   background: #f1f3f5;
 }
@@ -23,6 +23,11 @@
   background: #fff;
   margin: 20px;
   padding: 40px;
+}
+@media only screen and (max-width: 500px) {
+  .table-cover {
+    padding: 40px 0;
+  }
 }
 .rect-container {
   display: flex;
