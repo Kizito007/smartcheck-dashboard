@@ -50,8 +50,10 @@ const HomeScreen = () => {
                 </div>
             </div>
         </div>
-        <SelectBar />
-        <BasicTable />
+        <div className='table-cover'>
+            <SelectBar /> <br/><br/>
+            <BasicTable />
+        </div>
     </div>
     </>
   )

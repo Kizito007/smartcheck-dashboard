@@ -16,16 +16,13 @@ export default function SelectBar() {
   return (
     <div className='selectContainer'>
         <FormControl sx={{ m: 1, minWidth: '120' }} variant="outlined">
+        <InputLabel htmlFor="outlined-adornment-weight">Enter a search keyword</InputLabel>
           <OutlinedInput
             id="outlined-adornment-weight"
             // value={values.weight}
             // onChange={handleChange('weight')}
-            endAdornment={<InputAdornment position="end">🔍</InputAdornment>}
-            aria-describedby="outlined-weight-helper-text"
-            inputProps={{
-              'aria-label': 'weight',
-            }}
-            label='Enter a search keyword'
+            startAdornment={<InputAdornment position="start">🔍</InputAdornment>}
+            label="Enter a search keyword"
           />
         </FormControl>
         <FormControl sx={{ m: 1, minWidth: 120 }}>
@@ -37,12 +34,12 @@ export default function SelectBar() {
             label="Age"
             onChange={handleChange}
             >
-            <MenuItem value="">
+            {/* <MenuItem value="">
                 <em>None</em>
-            </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            </MenuItem> */}
+            <MenuItem value={10}>All Application</MenuItem>
+            <MenuItem value={10}>Application name 1</MenuItem>
+            <MenuItem value={20}>Application name 2</MenuItem>
             </Select>
         </FormControl> 
         <FormControl sx={{ m: 1, minWidth: 120 }}>
@@ -54,12 +51,12 @@ export default function SelectBar() {
             label="Age"
             onChange={handleChange}
             >
-            <MenuItem value="">
+            {/* <MenuItem value="">
                 <em>None</em>
-            </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            </MenuItem> */}
+            <MenuItem value={20}>All servers</MenuItem>
+            <MenuItem value={20}>Server 1</MenuItem>
+            <MenuItem value={30}>Server 2</MenuItem>
             </Select>
         </FormControl> 
         <FormControl sx={{ m: 1, minWidth: 120 }}>
@@ -71,12 +68,12 @@ export default function SelectBar() {
             label="Age"
             onChange={handleChange}
             >
-            <MenuItem value="">
+            {/* <MenuItem value="">
                 <em>None</em>
-            </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            </MenuItem> */}
+            <MenuItem value={10}>All Status</MenuItem>
+            <MenuItem value={20}>Healthy</MenuItem>
+            <MenuItem value={30}>Critical</MenuItem>
             </Select>
         </FormControl> 
         
