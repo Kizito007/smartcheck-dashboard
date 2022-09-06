@@ -13,6 +13,9 @@
 /* .css-19r6kue-MuiContainer-root {
   background: #fff;
 } */
+.backdrop {
+  background: #f1f3f5;
+}
 .css-1q39md6-MuiButtonBase-root-MuiButton-root {
   color: #1b1164;
 }
@@ -20,7 +23,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 20px 0;
+  /* margin: 20px 0; */
 }
 .rectangle {
   width: 400px;

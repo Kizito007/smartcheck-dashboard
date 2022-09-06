@@ -12,6 +12,9 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 // import AdbIcon from '@mui/icons-material/Adb';
+import home from "../assets/home.svg"
+import group from "../assets/group.svg"
+import serving from "../assets/serving.svg"
 
 const pages = ['Home', 'Server', 'Application'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -36,29 +39,12 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{backgroundColor: "#fff"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
-          {/* <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography> */}
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, backgroundColor: 'primary.dark' }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -87,45 +73,39 @@ const ResponsiveAppBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+              <MenuItem  onClick={handleCloseNavMenu}>
+                <Typography textAlign="center">Home</Typography>
+              </MenuItem>
+              <MenuItem  onClick={handleCloseNavMenu}>
+                <Typography textAlign="center">Server</Typography>
+              </MenuItem>
+              <MenuItem  onClick={handleCloseNavMenu}>
+                <Typography textAlign="center">Application</Typography>
+              </MenuItem>
             </Menu>
           </Box>
-          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
-          {/* <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            Dashboard
-          </Typography> */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+             <Button
+              onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: '#1b1164', display: 'block' }}
               >
-                {page}
+                <img src={home} /> Home
               </Button>
-            ))}
+             <Button
+              onClick={handleCloseNavMenu}
+                sx={{ my: 2, mx: 4, color: '#1b1164', display: 'block' }}
+              >
+                <img src={group} /> Server
+              </Button>
+             <Button
+              onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: '#1b1164', display: 'block' }}
+              >
+                <img src={serving} /> Application
+              </Button>
           </Box>
 
-          <Button variant="contained">Check Health Status</Button>
+          <Button variant="contained" sx={{backgroundColor: "#499DFF"}}>Check Health Status</Button>
 
         </Toolbar>
       </Container>

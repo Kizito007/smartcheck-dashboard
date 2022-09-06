@@ -25,6 +25,7 @@ export default function SelectBar() {
             inputProps={{
               'aria-label': 'weight',
             }}
+            label='Enter a search keyword'
           />
         </FormControl>
         <FormControl sx={{ m: 1, minWidth: 120 }}>
