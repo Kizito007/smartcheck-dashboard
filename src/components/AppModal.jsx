@@ -4,6 +4,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 
 const style = {
   position: 'absolute',
@@ -17,7 +19,7 @@ const style = {
   p: 4,
 };
 
-const CreateServerModal = () => {
+const AppModal = () => {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -26,7 +28,7 @@ const CreateServerModal = () => {
     <div>
     <Button variant="contained" onClick={handleOpen}
         sx={{backgroundColor: "#499DFF", my: 3, float: "right" }}>
-        Create Server
+        Add Application
     </Button>
       <Modal
         open={open}
@@ -36,29 +38,38 @@ const CreateServerModal = () => {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            Create a Server
+            Define Application
           </Typography><br/>
-          <Typography id="modal-modal-description" sx={{ my: 3 }}>
-            <span> Enter server details </span>
-          </Typography>
           <Typography sx={{ m: 1 }}>
-            Server Name
+            Application Name
           </Typography>
           <TextField id="outlined-basic" variant="outlined" />
           <Typography sx={{ m: 1 }}>
-            Server IP
+            Application Type
           </Typography>
           <TextField id="outlined-basic" variant="outlined" />
 
           <Typography sx={{ m: 1 }}>
-            CPU
+            Application Dcsc
           </Typography>
           <TextField id="outlined-basic" variant="outlined" />
 
           <Typography sx={{ m: 1 }}>
-            Storage
+            Application Port
+          </Typography>
+          <TextField id="outlined-basic" variant="outlined" />
+          <Typography sx={{ m: 1 }}>
+            End point
           </Typography>
           <TextField id="outlined-basic" variant="outlined" /><br/><br/>
+          <Typography sx={{ m: 1 }}>
+            Host/Server
+          </Typography>
+          <FormControlLabel control={<Checkbox defaultChecked />} label="All Server" />
+          <Typography sx={{ m: 1 }}>
+            Select Application
+          </Typography>
+          <br/><br/>
 
           <Button variant="contained" sx={{color: "#222222", backgroundColor: "#fff", py: 0.5, mx: 2 }}>Cancel</Button>
           <Button variant="contained" sx={{backgroundColor: "#49D3FF", py: 0.5, }}>Create</Button>
@@ -77,4 +88,4 @@ const CreateServerModal = () => {
   )
 }
 
-export default CreateServerModal
+export default AppModal

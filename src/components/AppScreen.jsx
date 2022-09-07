@@ -12,13 +12,13 @@ import Stack from '@mui/material/Stack';
 import pdf from "../assets/pdf.svg" 
 import xls from "../assets/xls.svg" 
 import BasicPopover from './Popover';
-import MoreVert from "@mui/icons-material/MoreVert"
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputAdornment from '@mui/material/InputAdornment';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import AppModal from './AppModal';
 
 function createData(sn, name, type, cpu, port, endpoint, host) {
     return { sn, name, type, cpu, port, endpoint, host };
@@ -68,9 +68,7 @@ const AppScreen = () => {
             <MenuItem value={30}>All</MenuItem>
             </Select>
         </FormControl> 
-        <Button variant="contained" sx={{backgroundColor: "#499DFF", my: 3, float: "right" }}>
-            Add Application
-        </Button>
+        <AppModal />
         
         <TableContainer component={Paper}>
         <Table>
