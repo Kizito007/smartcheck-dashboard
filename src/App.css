@@ -78,8 +78,8 @@
 }
 .num2 {
   border: 2px solid #24c977;
-  background: inherit;
-  color: #24c977;
+  background: #24c977;
+  color: #fff;
 }
 .num3 {
   border: 2px solid #ff4343f7;
