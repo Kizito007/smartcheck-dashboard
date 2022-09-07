@@ -11,10 +11,6 @@ import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import pdf from "../assets/pdf.svg" 
 import xls from "../assets/xls.svg" 
-import triangle from "../assets/triangle.svg" 
-import Lens from "@mui/icons-material/Lens"
-import CheckCircle from "@mui/icons-material/CheckCircle"
-import MoreVert from "@mui/icons-material/MoreVert"
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import OutlinedInput from '@mui/material/OutlinedInput';
@@ -22,6 +18,7 @@ import InputAdornment from '@mui/material/InputAdornment';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import BasicPopover from './Popover';
+import CreateServerModal from './CreateServerModal';
 
 function createData(sn, name, ipAddress, cpu, memory, storage) {
     return { sn, name, ipAddress, cpu, memory, storage };
@@ -71,10 +68,7 @@ const ServerScreen = () => {
             <MenuItem value={30}>Critical</MenuItem>
             </Select>
         </FormControl> 
-        <Button variant="contained" sx={{backgroundColor: "#499DFF", my: 3, float: "right" }}>
-            Create Server
-        </Button>
-        
+        <CreateServerModal />
         <TableContainer component={Paper}>
         <Table>
             <TableHead>
