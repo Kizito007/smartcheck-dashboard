@@ -14,7 +14,7 @@ import xls from "../assets/xls.svg"
 import triangle from "../assets/triangle.svg" 
 import Lens from "@mui/icons-material/Lens"
 import CheckCircle from "@mui/icons-material/CheckCircle"
-import MoreVert from "@mui/icons-material/MoreVert"
+import BasicPopover from './Popover';
 
 function createData(sn, text, servers, time, health) {
   return { sn, text, servers, time, health };
@@ -81,7 +81,7 @@ export default function BasicTable() {
                 </Button>
               </TableCell>
               <TableCell>
-              <MoreVert sx={{ color: "#f1f3f5", }}>add_circle</MoreVert> 
+                <BasicPopover />
               </TableCell>
             </TableRow>
           ))}

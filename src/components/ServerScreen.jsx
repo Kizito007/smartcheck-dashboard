@@ -21,6 +21,7 @@ import OutlinedInput from '@mui/material/OutlinedInput';
 import InputAdornment from '@mui/material/InputAdornment';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import BasicPopover from './Popover';
 
 function createData(sn, name, ipAddress, cpu, memory, storage) {
     return { sn, name, ipAddress, cpu, memory, storage };
@@ -127,7 +128,7 @@ const ServerScreen = () => {
                     </Button>
                 </TableCell>
                 <TableCell>
-                <MoreVert sx={{ color: "#f1f3f5", }}>add_circle</MoreVert> 
+                    <BasicPopover />
                 </TableCell>
                 </TableRow>
             ))}

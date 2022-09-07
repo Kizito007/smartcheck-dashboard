@@ -11,9 +11,7 @@ import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import pdf from "../assets/pdf.svg" 
 import xls from "../assets/xls.svg" 
-import triangle from "../assets/triangle.svg" 
-import Lens from "@mui/icons-material/Lens"
-import CheckCircle from "@mui/icons-material/CheckCircle"
+import BasicPopover from './Popover';
 import MoreVert from "@mui/icons-material/MoreVert"
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -128,7 +126,7 @@ const AppScreen = () => {
                     </Button>
                 </TableCell>
                 <TableCell>
-                <MoreVert sx={{ color: "#f1f3f5", }}>add_circle</MoreVert> 
+                <BasicPopover />
                 </TableCell>
                 </TableRow>
             ))}

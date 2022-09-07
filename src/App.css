@@ -23,6 +23,9 @@
 .css-1q39md6-MuiButtonBase-root-MuiButton-root {
   color: #1b1164;
 }
+.css-whaz3w-MuiSvgIcon-root:nth-child(5n) {
+  color: #ff4343f7;
+}
 .table-cover {
   background: #fff;
   margin: 20px;
