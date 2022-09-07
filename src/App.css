@@ -7,9 +7,13 @@
   height: 80px;
   width: 100%;
 }
+.nav-link {
+  text-decoration: none;
+}
 .css-1t6c9ts {
   padding-left: 3%;
 }
+.css-nhb8h9,
 .css-wjh20t-MuiPagination-ul {
   justify-content: center;
 }

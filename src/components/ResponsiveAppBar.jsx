@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -75,13 +76,19 @@ const ResponsiveAppBar = () => {
               }}
             >
               <MenuItem  onClick={handleCloseNavMenu}>
+                <Link to="/" className='nav-link'>
                 <Typography textAlign="center">Home</Typography>
+                </Link>
               </MenuItem>
               <MenuItem  onClick={handleCloseNavMenu}>
+                <Link to="/server" className='nav-link'>
                 <Typography textAlign="center">Server</Typography>
+                </Link>
               </MenuItem>
               <MenuItem  onClick={handleCloseNavMenu}>
+                <Link to="/application" className='nav-link'>
                 <Typography textAlign="center">Application</Typography>
+                </Link>
               </MenuItem>
             </Menu>
           </Box>
@@ -90,19 +97,25 @@ const ResponsiveAppBar = () => {
               onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: '#1b1164', display: 'block' }}
               >
+                <Link to="/" className='nav-link'>
                 <img src={home} /> Home
+                </Link>
               </Button>
              <Button
               onClick={handleCloseNavMenu}
                 sx={{ my: 2, mx: 4, color: '#1b1164', display: 'block' }}
               >
+                <Link to="/server" className='nav-link'>
                 <img src={group} /> Server
+                </Link>
               </Button>
              <Button
               onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: '#1b1164', display: 'block' }}
               >
+                <Link to="/application" className='nav-link'>
                 <img src={serving} /> Application
+                </Link>
               </Button>
           </Box>
 

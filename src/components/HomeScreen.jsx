@@ -1,12 +1,9 @@
 import React from 'react'
-import Header from '../components/Header';
 import SelectBar from './SelectBar';
 import BasicTable from './Table';
 
 const HomeScreen = () => {
   return (
-    <>
-    <Header />
     <div className='backdrop'>
         <div className='rect-container'>
             <div className='rectangle'>
@@ -55,7 +52,6 @@ const HomeScreen = () => {
             <BasicTable />
         </div>
     </div>
-    </>
   )
 }
 
